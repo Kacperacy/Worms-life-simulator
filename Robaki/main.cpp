@@ -1,6 +1,4 @@
-﻿#include <iostream>
-#include <SFML/Graphics.hpp>
-#include "View.h"
+﻿#include "View.h"
 
 int main()
 {

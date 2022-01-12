@@ -19,8 +19,8 @@ class View
 	Board board;
 	int turns = 1;
 	int worms_amount = board.get_worms_amount();
-	double worms_avg_living_time = board.get_worms_avg_living_time();
-	double worms_avg_length = board.get_worms_avg_length();
+	int worms_avg_living_time = board.get_worms_avg_living_time();
+	int worms_avg_length = board.get_worms_avg_length();
 	int all_worms_amount = board.all_worms_amount;
 public:
 	View();
