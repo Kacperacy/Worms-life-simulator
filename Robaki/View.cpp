@@ -2,7 +2,7 @@
 
 View::View()
 {
-	window.create(sf::VideoMode(800, 600),"Robaki");
+	window.create(sf::VideoMode(1000, 600),"Robaki");
 	window.setFramerateLimit(60);
 	board.add_worm(50);
 	board.update();
@@ -11,10 +11,10 @@ View::View()
 
 	text.setFont(font);
 	text.setCharacterSize(25);
-	text.setString("Tury:\n" + std::to_string(turns) + "\nIlosc robakow:\n" + std::to_string(worms_amount) + "\nSrednia dlugosc\nrobakow:\n" + std::to_string(worms_avg_length) + "\nSrednia dlugosc\nzycia robakow:\n" + std::to_string(worms_avg_living_time) + "\nLaczna ilosc\nrobakow przez\ncala gre:\n" + std::to_string(all_worms_amount));
+	text.setString("Tury:\n" + std::to_string(turns) + "\nIlosc robakow:\n" + std::to_string(worms_amount) + "\nSrednia dlugosc\nrobakow:\n" + std::to_string(worms_avg_length) + "\nSrednia dlugosc\nzycia robakow:\n" + std::to_string(worms_avg_living_time) + "\nLaczna ilosc\nrobakow przez\ncala gre:\n" + std::to_string(all_worms_amount)+"\nSPACJA\nPostawienie nowego\nrobaka");
 	text.setPosition(sf::Vector2f(605, 0));
 
-	background.setSize(sf::Vector2f(200, 600));
+	background.setSize(sf::Vector2f(400, 600));
 	background.setPosition(sf::Vector2f(600, 0));
 	background.setFillColor(sf::Color::Blue);
 
@@ -51,6 +51,31 @@ View::View()
 	no_food_legend.setFillColor(sf::Color::Red);
 	no_food_legend.setOutlineColor(sf::Color::Black);
 
+	max_kids_text.setString("Maksymalna ilosc \ndzieci\n"+std::to_string(max_kids)+"\nq = +1\na = -1");
+	max_kids_text.setFont(font);
+	max_kids_text.setCharacterSize(20);
+	max_kids_text.setPosition(805, 0);
+
+	max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia\n" + std::to_string(max_hungry_time) + "\nw = +1\ns = -1");
+	max_hungry_time_text.setFont(font);
+	max_hungry_time_text.setCharacterSize(20);
+	max_hungry_time_text.setPosition(805, 115);
+
+	max_length_text.setString("Maksymalna dlugosc \nrobaka\n" + std::to_string(max_length) + "\ne = +1\nd = -1");
+	max_length_text.setFont(font);
+	max_length_text.setCharacterSize(20);
+	max_length_text.setPosition(805, 230);
+
+	avg_living_time_text.setString("Srednia dlugosc \nzycia robaka\n" + std::to_string(avg_living_time) + "\nr = +1\nf = -1");
+	avg_living_time_text.setFont(font);
+	avg_living_time_text.setCharacterSize(20);
+	avg_living_time_text.setPosition(805, 345);
+
+	food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia\n" + std::to_string(food_recovery_time) + "\nt = +1\ng = -1");
+	food_recovery_time_text.setFont(font);
+	food_recovery_time_text.setCharacterSize(20);
+	food_recovery_time_text.setPosition(805, 460);
+
 	while(window.isOpen())
 	{
 		main_loop();
@@ -64,6 +89,63 @@ void View::main_loop()
 	{
 		if (event.type == sf::Event::Closed)
 			window.close();
+		if(event.type == sf::Event::KeyPressed)
+		{
+			if (event.key.code == sf::Keyboard::Space)
+			{
+				board.add_worm(rand() % 900);
+			}
+			if(event.key.code == sf::Keyboard::Q)
+			{
+				if(board.get_max_kids() < 100)
+					board.m_max_kids++;
+			}
+			if(event.key.code == sf::Keyboard::A)
+			{
+				if(board.get_max_kids() > 1)
+					board.m_max_kids--;
+			}
+			if (event.key.code == sf::Keyboard::W)
+			{
+				if (board.get_max_hungry_time() < 1000)
+					board.m_max_hungry_time++;
+			}
+			if (event.key.code == sf::Keyboard::S)
+			{
+				if (board.get_max_hungry_time() > 1)
+					board.m_max_hungry_time--;
+			}
+			if (event.key.code == sf::Keyboard::E)
+			{
+				if (board.get_max_length() < 100)
+					board.m_max_length++;
+			}
+			if (event.key.code == sf::Keyboard::D)
+			{
+				if (board.get_max_length() > 1)
+					board.m_max_length--;
+			}
+			if (event.key.code == sf::Keyboard::R)
+			{
+				if (board.get_avg_living_time() < 1000)
+					board.m_avg_living_time++;
+			}
+			if (event.key.code == sf::Keyboard::F)
+			{
+				if (board.get_avg_living_time() > 1)
+					board.m_avg_living_time--;
+			}
+			if (event.key.code == sf::Keyboard::T)
+			{
+				if (board.get_food_recovery_time() < 1000)
+					board.food_recovery_time++;
+			}
+			if (event.key.code == sf::Keyboard::G)
+			{
+				if (board.get_food_recovery_time() > 1)
+					board.food_recovery_time--;
+			}
+		}
 	}
 
 	sf::Time time = clock.getElapsedTime();
@@ -76,7 +158,17 @@ void View::main_loop()
 		worms_avg_living_time = board.get_worms_avg_living_time();
 		worms_avg_length = board.get_worms_avg_length();
 		all_worms_amount = board.all_worms_amount;
-		text.setString("Tury:\n" + std::to_string(turns) + "\nIlosc robakow:\n" + std::to_string(worms_amount) + "\nSrednia dlugosc\nrobakow:\n" + std::to_string(worms_avg_length) + "\nSrednia dlugosc\nzycia robakow:\n" + std::to_string(worms_avg_living_time) + "\nLaczna ilosc\nrobakow przez\ncala gre:\n" + std::to_string(all_worms_amount));
+		max_kids = board.get_max_kids();
+		max_hungry_time = board.get_max_hungry_time();
+		max_length = board.get_max_length();
+		avg_living_time = board.get_avg_living_time();
+		food_recovery_time = board.get_food_recovery_time();
+		text.setString("Tury:\n" + std::to_string(turns) + "\nIlosc robakow:\n" + std::to_string(worms_amount) + "\nSrednia dlugosc\nrobakow:\n" + std::to_string(worms_avg_length) + "\nSrednia dlugosc\nzycia robakow:\n" + std::to_string(worms_avg_living_time) + "\nLaczna ilosc\nrobakow przez\ncala gre:\n" + std::to_string(all_worms_amount) + "\nSPACJA\nPostawienie\nrobaka");
+		max_kids_text.setString("Maksymalna ilosc \ndzieci\n" + std::to_string(max_kids) + "\nq = +1\na = -1");
+		max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia\n" + std::to_string(max_hungry_time) + "\nw = +1\ns = -1");
+		max_length_text.setString("Maksymalna dlugosc \nrobaka\n" + std::to_string(max_length) + "\ne = +1\nd = -1");
+		avg_living_time_text.setString("Srednia dlugosc \nzycia robaka\n" + std::to_string(avg_living_time) + "\nr = +1\nf = -1");
+		food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia\n" + std::to_string(food_recovery_time) + "\nt = +1\ng = -1");
 	}
 
 	window.clear();
@@ -90,5 +182,10 @@ void View::main_loop()
 	window.draw(food_legend);
 	window.draw(no_food_legend_text);
 	window.draw(no_food_legend);
+	window.draw(max_kids_text);
+	window.draw(max_hungry_time_text);
+	window.draw(max_length_text);
+	window.draw(avg_living_time_text);
+	window.draw(food_recovery_time_text);
 	window.display();
 }

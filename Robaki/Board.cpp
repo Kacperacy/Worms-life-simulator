@@ -56,7 +56,7 @@ void Board::fill_boards()
 void Board::add_worm(int position)
 {
 	all_worms_amount++;
-	Worm new_worm(position);
+	Worm new_worm(position, m_max_kids, m_max_hungry_time, m_max_length, m_avg_living_time);
 	worm_board[position] = true;
 	worms_on_board.push_back(new_worm);
 }
@@ -141,4 +141,29 @@ void Board::update_worm_board()
 			worm_board[worms_on_board[i].m_positions[j]] = true;
 		}
 	}
+}
+
+int Board::get_max_kids()
+{
+	return m_max_kids;
+}
+
+int Board::get_max_hungry_time()
+{
+	return m_max_hungry_time;
+}
+
+int Board::get_max_length()
+{
+	return m_max_length;
+}
+
+int Board::get_avg_living_time()
+{
+	return m_avg_living_time;
+}
+
+int Board::get_food_recovery_time()
+{
+	return food_recovery_time;
 }
