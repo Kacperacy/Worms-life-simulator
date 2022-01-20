@@ -53,9 +53,9 @@ void Board::fill_boards()
 	}
 }
 
-void Board::add_worm(int position)
+void Board::add_worm(int position, bool is_breeding)
 {
-	if (worm_board[position]) return;
+	if (worm_board[position] && !is_breeding) return;
 	all_worms_amount++;
 	Worm new_worm(position, m_max_kids, m_max_hungry_time, m_max_length, m_avg_living_time);
 	worm_board[position] = true;
@@ -128,7 +128,7 @@ void Board::update_worm_board()
 		else {
 			if(worms_on_board[i].is_ready_for_breeding())
 			{
-				add_worm(worms_on_board[i].m_positions.back());
+				add_worm(worms_on_board[i].m_positions.back(), true);
 			}
 			worms_on_board[i].move(worm_board, food_board);
 		}

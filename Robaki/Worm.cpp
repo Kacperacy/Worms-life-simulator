@@ -18,8 +18,9 @@ Worm::Worm(int position, int max_kids, int max_hungry_time, int max_length, int 
 	m_length = 1;
 	m_hungry_time = 0;
 	m_max_living_time = rand() % 20 + m_avg_living_time - 10;
-	color.r = rand() % 255;
-	color.b = rand() % 255;
+	color.r = rand()%256;
+	color.g = rand()%128;
+	color.b = rand()%256;
 }
 
 Worm::~Worm()

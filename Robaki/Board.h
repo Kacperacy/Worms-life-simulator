@@ -23,7 +23,7 @@ public:
 	double get_worms_avg_length();
 	void clear_worm_board();
 	void fill_boards();
-	void add_worm(int position);
+	void add_worm(int position, bool is_breeding);
 	void init_graphics_board();
 	void update();
 	void update_graphics_board();
