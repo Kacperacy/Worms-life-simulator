@@ -92,12 +92,11 @@ void Board::update_graphics_board()
 	{
 		if(worm_board[i])
 		{
-			graphics_board[i].setFillColor(sf::Color::Magenta);
 			graphics_board[i].setOutlineColor(sf::Color::Cyan);
 		}
-		else if(!food_board[i])
+		else if (!food_board[i])
 		{
-			graphics_board[i].setFillColor(sf::Color::Green);
+			graphics_board[i].setFillColor(sf::Color(102,153,102));
 			graphics_board[i].setOutlineColor(sf::Color::Black);
 		}
 		else
@@ -140,6 +139,7 @@ void Board::update_worm_board()
 		for (int j = 0; j < worms_on_board[i].m_positions.size(); j++)
 		{
 			worm_board[worms_on_board[i].m_positions[j]] = true;
+			graphics_board[worms_on_board[i].m_positions[j]].setFillColor(worms_on_board[i].color);
 		}
 	}
 }

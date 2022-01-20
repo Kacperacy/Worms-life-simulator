@@ -3,6 +3,7 @@
 #define SIZE 30
 
 #include <vector>
+#include <SFML/Graphics/Color.hpp>
 
 class Worm
 {
@@ -16,6 +17,7 @@ class Worm
 	int m_max_living_time;
 	int m_kids = 0;
 public:
+	sf::Color color;
 	int m_breeding_time = 20;
 	int m_living_time = 0;
 	int m_length;
