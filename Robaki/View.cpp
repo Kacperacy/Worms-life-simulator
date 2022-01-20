@@ -1,5 +1,7 @@
 ﻿#include "View.h"
 
+#include <iostream>
+
 View::View()
 {
 	window.create(sf::VideoMode(1000, 600),"Robaki");
@@ -144,6 +146,15 @@ void View::main_loop()
 			{
 				if (board.get_food_recovery_time() > 1)
 					board.food_recovery_time--;
+			}
+		}
+		if(event.type == sf::Event::MouseButtonPressed)
+		{
+			if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+				if (event.mouseButton.x > 600 || event.mouseButton.y > 600) continue;
+				int position = 30*(event.mouseButton.y/20) + (event.mouseButton.x/20);
+				board.add_worm(position);
 			}
 		}
 	}

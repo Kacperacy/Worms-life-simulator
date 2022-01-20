@@ -55,6 +55,7 @@ void Board::fill_boards()
 
 void Board::add_worm(int position)
 {
+	if (worm_board[position]) return;
 	all_worms_amount++;
 	Worm new_worm(position, m_max_kids, m_max_hungry_time, m_max_length, m_avg_living_time);
 	worm_board[position] = true;
