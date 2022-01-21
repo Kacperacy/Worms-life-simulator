@@ -101,7 +101,7 @@ void Board::update_graphics_board()
 		}
 		else
 		{
-			graphics_board[i].setFillColor(sf::Color::Red);
+			graphics_board[i].setFillColor(sf::Color(138,3,3));
 			graphics_board[i].setOutlineColor(sf::Color::Black);
 		}
 	}

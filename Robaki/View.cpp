@@ -17,7 +17,7 @@ View::View()
 
 	background.setSize(sf::Vector2f(400, 600));
 	background.setPosition(sf::Vector2f(600, 0));
-	background.setFillColor(sf::Color::Blue);
+	background.setFillColor(sf::Color(70,130,180));
 
 	worm_legend_text.setString("- Robak");
 	worm_legend_text.setFont(font);
@@ -49,30 +49,30 @@ View::View()
 	no_food_legend.setSize(sf::Vector2f(18, 18));
 	no_food_legend.setPosition(sf::Vector2f(605, 575));
 	no_food_legend.setOutlineThickness(1);
-	no_food_legend.setFillColor(sf::Color::Red);
+	no_food_legend.setFillColor(sf::Color(138, 3, 3));
 	no_food_legend.setOutlineColor(sf::Color::Black);
 
-	max_kids_text.setString("Maksymalna ilosc \ndzieci\n"+std::to_string(max_kids)+"\nq - zwieksz\na - zmniejsz");
+	max_kids_text.setString("Maksymalna ilosc \ndzieci:\n"+std::to_string(max_kids)+"\nq - zwieksz\na - zmniejsz");
 	max_kids_text.setFont(font);
 	max_kids_text.setCharacterSize(20);
 	max_kids_text.setPosition(805, 0);
 
-	max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia\n" + std::to_string(max_hungry_time) + "\nw - zwieksz\ns - zmniejsz");
+	max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia:\n" + std::to_string(max_hungry_time) + "\nW - zwieksz\nS - zmniejsz");
 	max_hungry_time_text.setFont(font);
 	max_hungry_time_text.setCharacterSize(20);
 	max_hungry_time_text.setPosition(805, 115);
 
-	max_length_text.setString("Maksymalna dlugosc \nrobaka\n" + std::to_string(max_length) + "\ne - zwieksz\nd - zmniejsz");
+	max_length_text.setString("Maksymalna dlugosc \nrobaka:\n" + std::to_string(max_length) + "\nE - zwieksz\nD - zmniejsz");
 	max_length_text.setFont(font);
 	max_length_text.setCharacterSize(20);
 	max_length_text.setPosition(805, 230);
 
-	avg_living_time_text.setString("Srednia dlugosc \nzycia robaka\n" + std::to_string(avg_living_time) + "\nr - zwieksz\nf - zmniejsz");
+	avg_living_time_text.setString("Srednia dlugosc \nzycia robaka:\n" + std::to_string(avg_living_time) + "\nR - zwieksz\nF - zmniejsz");
 	avg_living_time_text.setFont(font);
 	avg_living_time_text.setCharacterSize(20);
 	avg_living_time_text.setPosition(805, 345);
 
-	food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia\n" + std::to_string(food_recovery_time) + "\nt - zwieksz\ng - zmniejsz");
+	food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia:\n" + std::to_string(food_recovery_time) + "\nT - zwieksz\nG - zmniejsz");
 	food_recovery_time_text.setFont(font);
 	food_recovery_time_text.setCharacterSize(20);
 	food_recovery_time_text.setPosition(805, 460);
@@ -146,6 +146,10 @@ void View::main_loop()
 				if (board.get_food_recovery_time() > 1)
 					board.food_recovery_time--;
 			}
+			if(event.key.code == sf::Keyboard::P)
+			{
+				is_paused = !is_paused;
+			}
 		}
 		if(event.type == sf::Event::MouseButtonPressed)
 		{
@@ -159,7 +163,7 @@ void View::main_loop()
 	}
 
 	sf::Time time = clock.getElapsedTime();
-	if (time.asMilliseconds() > 100)
+	if (time.asMilliseconds() > 100 && !is_paused)
 	{
 		turns++;
 		clock.restart();
@@ -174,11 +178,11 @@ void View::main_loop()
 		avg_living_time = board.get_avg_living_time();
 		food_recovery_time = board.get_food_recovery_time();
 		text.setString("Tury:\n" + std::to_string(turns) + "\nIlosc robakow:\n" + std::to_string(worms_amount) + "\nSrednia dlugosc\nrobakow:\n" + std::to_string(worms_avg_length) + "\nSrednia dlugosc\nzycia robakow:\n" + std::to_string(worms_avg_living_time) + "\nLaczna ilosc\nrobakow przez\ncala gre:\n" + std::to_string(all_worms_amount) + "\nSPACJA\nPostawienie\nrobaka");
-		max_kids_text.setString("Maksymalna ilosc \ndzieci\n" + std::to_string(max_kids) + "\nq - zwieksz\na - zmniejsz");
-		max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia\n" + std::to_string(max_hungry_time) + "\nw - zwieksz\ns - zmniejsz");
-		max_length_text.setString("Maksymalna dlugosc \nrobaka\n" + std::to_string(max_length) + "\ne - zwieksz\nd - zmniejsz");
-		avg_living_time_text.setString("Srednia dlugosc \nzycia robaka\n" + std::to_string(avg_living_time) + "\nr - zwieksz\nf - zmniejsz");
-		food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia\n" + std::to_string(food_recovery_time) + "\nt - zwieksz\ng - zmniejsz");
+		max_kids_text.setString("Maksymalna ilosc \ndzieci:\n" + std::to_string(max_kids) + "\nQ - zwieksz\nA - zmniejsz");
+		max_hungry_time_text.setString("Maksymalna dlugosc \nbez jedzenia:\n" + std::to_string(max_hungry_time) + "\nW - zwieksz\nS - zmniejsz");
+		max_length_text.setString("Maksymalna dlugosc \nrobaka:\n" + std::to_string(max_length) + "\nE - zwieksz\nD - zmniejsz");
+		avg_living_time_text.setString("Srednia dlugosc \nzycia robaka:\n" + std::to_string(avg_living_time) + "\nR - zwieksz\nF - zmniejsz");
+		food_recovery_time_text.setString("Srednia dlugosc \nwzrostu jedzenia:\n" + std::to_string(food_recovery_time) + "\nT - zwieksz\nG - zmniejsz");
 	}
 
 	window.clear();

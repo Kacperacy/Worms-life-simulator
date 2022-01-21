@@ -32,6 +32,7 @@ class View
 	int worms_avg_living_time = board.get_worms_avg_living_time();
 	int worms_avg_length = board.get_worms_avg_length();
 	int all_worms_amount = board.all_worms_amount;
+	bool is_paused = false;
 public:
 	View();
 	void main_loop();

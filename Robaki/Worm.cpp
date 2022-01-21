@@ -80,7 +80,7 @@ int Worm::next_position(int current_position, int direction)
 	if(direction == 1)
 	{
 		if (current_position % SIZE == SIZE-1)
-			return current_position - SIZE - 1;
+			return current_position - SIZE + 1;
 		return current_position + 1;
 	}
 	if (direction == 2)
