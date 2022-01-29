@@ -1,13 +1,5 @@
 #include "Worm.h"
 
-Worm::Worm(int position) : m_max_kids(3), m_max_hungry_time(10), m_max_length(15), m_productivity_time(7), m_avg_living_time(80)
-{
-	m_positions.push_back(position);
-	m_length = 1;
-	m_hungry_time = 0;
-	m_max_living_time = rand() % 20 + m_avg_living_time-10;
-}
-
 Worm::Worm(int position, int max_kids, int max_hungry_time, int max_length, int avg_living_time)
 {
 	m_max_kids = max_kids;

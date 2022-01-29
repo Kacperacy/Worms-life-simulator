@@ -1,0 +1,407 @@
+\hypertarget{class_view}{}\doxysection{View Class Reference}
+\label{class_view}\index{View@{View}}
+
+
+Klasa która zawiera główną pętlę symulacji.  
+
+
+
+
+{\ttfamily \#include $<$View.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_a44ad60a768422d3fa8fbd7576950080a}{View}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_af2ac567eb0f48d3dbf2110e8393d25ea}{main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em Główna pętla symulacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_a03c764bd42440fd45d025b61a4e09206}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która rysuje menu na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Clock \mbox{\hyperlink{class_view_a27bcb0f4298971925c4a5548f9bbea09}{clock}}
+\begin{DoxyCompactList}\small\item\em Zmienna która pozwala na mierzenie czasu. \end{DoxyCompactList}\item 
+sf\+::\+Font \mbox{\hyperlink{class_view_a454dcb63cf5db159d47aedc50836d262}{font}}
+\begin{DoxyCompactList}\small\item\em Zmienna która przetrzymuje czcionkę. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_aa9c4ad79a885c64384806a2e7d602a7b}{text}}
+\begin{DoxyCompactList}\small\item\em Zmienna która ma w sobie tekst wszystkich statystyk z menu. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_view_adb6267dabb201daf1a3f8385126b485d}{background}}
+\begin{DoxyCompactList}\small\item\em Tło menu. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_ad9bd6c557fc452070876a4ea5e4849c6}{worm\+\_\+legend\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Kwadracik z legendą jak wygląda robak na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_view_a9a6b3c4799d393f4d40cd12b4b3578ce}{worm\+\_\+legend}}
+\begin{DoxyCompactList}\small\item\em Opis kwadracika z tym jak wygląda robak na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_a3e947c59eb1be8c5e2a74e251ace576a}{food\+\_\+legend\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Kwadracik z legendą jak wygląda jedzenie na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_view_a9f64a3d5216aa93cc1757e834932b8f4}{food\+\_\+legend}}
+\begin{DoxyCompactList}\small\item\em Opis kwadracika z tym jak wygląda jedzenie na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_aad7f03d9c4c9af69b1dccf6561333593}{no\+\_\+food\+\_\+legend\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Kwadracik z legendą jak wygląda brak jedzenia na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_view_a97bd9cbc2645727eee3b2579640f3333}{no\+\_\+food\+\_\+legend}}
+\begin{DoxyCompactList}\small\item\em Opis kwadracika z tym jak wygląda brak jedzenia na planszy. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_a7268064ff657abe1146ff4e33369d5c6}{max\+\_\+kids\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Tekst z aktualną maksymalną ilością dzieci jakie mogą mieć robaki. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_ac2eb6d296dab78a1d57b7ba9219c38d0}{max\+\_\+hungry\+\_\+time\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Tekst z aktualną maksymalną długością czasu jaką robaki mogą chodzić po polach bez jedzenia. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_a8e4cd2f4aa728ae3d976fe1d3a5840a2}{max\+\_\+length\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Tekst z aktualną maksymalną długością robaków. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_ada4e79abb9d71fdfaecbb5800fe707f4}{avg\+\_\+living\+\_\+time\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Tekst z aktualną maksymalną długością życia robaków. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_view_a273b1a62a16cc2772bf3cbef36809412}{food\+\_\+recovery\+\_\+time\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Tekst z aktualną długością czasu jaki zajmuje jednemu polu aby odrosło na nim jedzenie. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{class_view_a1e5eb536db76cf7dbf07c927f27e4230}{window}}
+\begin{DoxyCompactList}\small\item\em Okno symulacji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}
+\begin{DoxyCompactList}\small\item\em Obiekt planszy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a502c0777133e67928182d02d75bfe95a}{max\+\_\+kids}} = board.\+get\+\_\+max\+\_\+kids()
+\begin{DoxyCompactList}\small\item\em Aktualna maksymalna ilość dzieci jaką mogą mieć robaki. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_aed2203ee6c0016c78ee28e15c83729c5}{max\+\_\+hungry\+\_\+time}} = board.\+get\+\_\+max\+\_\+hungry\+\_\+time()
+\begin{DoxyCompactList}\small\item\em Aktualna maksymalna długość czasu jaką robaki mogą chodzić po polach bez jedzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a4e7c884549c2632d5a9d0980590404e2}{max\+\_\+length}} = board.\+get\+\_\+max\+\_\+length()
+\begin{DoxyCompactList}\small\item\em Aktualna maksymalna długość robaków. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a19087874e9c8bdef962be860f0af5aec}{avg\+\_\+living\+\_\+time}} = board.\+get\+\_\+avg\+\_\+living\+\_\+time()
+\begin{DoxyCompactList}\small\item\em Aktualna maksymalna długość życia robaków. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a9657a45cbc297ed337cb17a4046ff5f9}{food\+\_\+recovery\+\_\+time}} = board.\+get\+\_\+food\+\_\+recovery\+\_\+time()
+\begin{DoxyCompactList}\small\item\em Aktualna dłguość odrastania jedzenia na planszy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a92314479ce1abbd216afbca08de65296}{turns}} = 1
+\begin{DoxyCompactList}\small\item\em Aktualna ilość tur przez jakie przeszła symulacja. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a90fe97b4fba5e3c6a1511850e38de64f}{worms\+\_\+amount}} = board.\+get\+\_\+worms\+\_\+amount()
+\begin{DoxyCompactList}\small\item\em Aktualna ilość robaków na planszy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a9bed8533a8735d0826abfd0419ffcd0a}{worms\+\_\+avg\+\_\+living\+\_\+time}} = board.\+get\+\_\+worms\+\_\+avg\+\_\+living\+\_\+time()
+\begin{DoxyCompactList}\small\item\em Aktualna średnia długość życia robaków na planszy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a40a326aff0f04e9eaa97ae4390fcbaff}{worms\+\_\+avg\+\_\+length}} = board.\+get\+\_\+worms\+\_\+avg\+\_\+length()
+\begin{DoxyCompactList}\small\item\em Aktualna średnia długość robaków na planszy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_view_a8d63bd9a32945f8e59dfe2661967b166}{all\+\_\+worms\+\_\+amount}} = board.\+all\+\_\+worms\+\_\+amount
+\begin{DoxyCompactList}\small\item\em Ilość robaków które pojawiły się na planszy przez całą symulację. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_view_a3adee7bd79e0f4e5311f2347aecf9224}{is\+\_\+paused}} = false
+\begin{DoxyCompactList}\small\item\em Czy gra jest zapauzowana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa która zawiera główną pętlę symulacji. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_a44ad60a768422d3fa8fbd7576950080a}\label{class_view_a44ad60a768422d3fa8fbd7576950080a}} 
+\index{View@{View}!View@{View}}
+\index{View@{View}!View@{View}}
+\doxysubsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily View\+::\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_a03c764bd42440fd45d025b61a4e09206}\label{class_view_a03c764bd42440fd45d025b61a4e09206}} 
+\index{View@{View}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!View@{View}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily void View\+::draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która rysuje menu na ekranie. 
+
+\mbox{\Hypertarget{class_view_af2ac567eb0f48d3dbf2110e8393d25ea}\label{class_view_af2ac567eb0f48d3dbf2110e8393d25ea}} 
+\index{View@{View}!main\_loop@{main\_loop}}
+\index{main\_loop@{main\_loop}!View@{View}}
+\doxysubsubsection{\texorpdfstring{main\_loop()}{main\_loop()}}
+{\footnotesize\ttfamily void View\+::main\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Główna pętla symulacji. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_view_a8d63bd9a32945f8e59dfe2661967b166}\label{class_view_a8d63bd9a32945f8e59dfe2661967b166}} 
+\index{View@{View}!all\_worms\_amount@{all\_worms\_amount}}
+\index{all\_worms\_amount@{all\_worms\_amount}!View@{View}}
+\doxysubsubsection{\texorpdfstring{all\_worms\_amount}{all\_worms\_amount}}
+{\footnotesize\ttfamily int View\+::all\+\_\+worms\+\_\+amount = board.\+all\+\_\+worms\+\_\+amount\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ilość robaków które pojawiły się na planszy przez całą symulację. 
+
+\mbox{\Hypertarget{class_view_a19087874e9c8bdef962be860f0af5aec}\label{class_view_a19087874e9c8bdef962be860f0af5aec}} 
+\index{View@{View}!avg\_living\_time@{avg\_living\_time}}
+\index{avg\_living\_time@{avg\_living\_time}!View@{View}}
+\doxysubsubsection{\texorpdfstring{avg\_living\_time}{avg\_living\_time}}
+{\footnotesize\ttfamily int View\+::avg\+\_\+living\+\_\+time = board.\+get\+\_\+avg\+\_\+living\+\_\+time()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna maksymalna długość życia robaków. 
+
+\mbox{\Hypertarget{class_view_ada4e79abb9d71fdfaecbb5800fe707f4}\label{class_view_ada4e79abb9d71fdfaecbb5800fe707f4}} 
+\index{View@{View}!avg\_living\_time\_text@{avg\_living\_time\_text}}
+\index{avg\_living\_time\_text@{avg\_living\_time\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{avg\_living\_time\_text}{avg\_living\_time\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::avg\+\_\+living\+\_\+time\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst z aktualną maksymalną długością życia robaków. 
+
+\mbox{\Hypertarget{class_view_adb6267dabb201daf1a3f8385126b485d}\label{class_view_adb6267dabb201daf1a3f8385126b485d}} 
+\index{View@{View}!background@{background}}
+\index{background@{background}!View@{View}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape View\+::background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tło menu. 
+
+\mbox{\Hypertarget{class_view_a5c2fa1393dfbe4fefd072b154895c517}\label{class_view_a5c2fa1393dfbe4fefd072b154895c517}} 
+\index{View@{View}!board@{board}}
+\index{board@{board}!View@{View}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} View\+::board\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obiekt planszy. 
+
+\mbox{\Hypertarget{class_view_a27bcb0f4298971925c4a5548f9bbea09}\label{class_view_a27bcb0f4298971925c4a5548f9bbea09}} 
+\index{View@{View}!clock@{clock}}
+\index{clock@{clock}!View@{View}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily sf\+::\+Clock View\+::clock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna która pozwala na mierzenie czasu. 
+
+\mbox{\Hypertarget{class_view_a454dcb63cf5db159d47aedc50836d262}\label{class_view_a454dcb63cf5db159d47aedc50836d262}} 
+\index{View@{View}!font@{font}}
+\index{font@{font}!View@{View}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font View\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna która przetrzymuje czcionkę. 
+
+\mbox{\Hypertarget{class_view_a9f64a3d5216aa93cc1757e834932b8f4}\label{class_view_a9f64a3d5216aa93cc1757e834932b8f4}} 
+\index{View@{View}!food\_legend@{food\_legend}}
+\index{food\_legend@{food\_legend}!View@{View}}
+\doxysubsubsection{\texorpdfstring{food\_legend}{food\_legend}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape View\+::food\+\_\+legend\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opis kwadracika z tym jak wygląda jedzenie na planszy. 
+
+\mbox{\Hypertarget{class_view_a3e947c59eb1be8c5e2a74e251ace576a}\label{class_view_a3e947c59eb1be8c5e2a74e251ace576a}} 
+\index{View@{View}!food\_legend\_text@{food\_legend\_text}}
+\index{food\_legend\_text@{food\_legend\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{food\_legend\_text}{food\_legend\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::food\+\_\+legend\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kwadracik z legendą jak wygląda jedzenie na planszy. 
+
+\mbox{\Hypertarget{class_view_a9657a45cbc297ed337cb17a4046ff5f9}\label{class_view_a9657a45cbc297ed337cb17a4046ff5f9}} 
+\index{View@{View}!food\_recovery\_time@{food\_recovery\_time}}
+\index{food\_recovery\_time@{food\_recovery\_time}!View@{View}}
+\doxysubsubsection{\texorpdfstring{food\_recovery\_time}{food\_recovery\_time}}
+{\footnotesize\ttfamily int View\+::food\+\_\+recovery\+\_\+time = board.\+get\+\_\+food\+\_\+recovery\+\_\+time()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna dłguość odrastania jedzenia na planszy. 
+
+\mbox{\Hypertarget{class_view_a273b1a62a16cc2772bf3cbef36809412}\label{class_view_a273b1a62a16cc2772bf3cbef36809412}} 
+\index{View@{View}!food\_recovery\_time\_text@{food\_recovery\_time\_text}}
+\index{food\_recovery\_time\_text@{food\_recovery\_time\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{food\_recovery\_time\_text}{food\_recovery\_time\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::food\+\_\+recovery\+\_\+time\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst z aktualną długością czasu jaki zajmuje jednemu polu aby odrosło na nim jedzenie. 
+
+\mbox{\Hypertarget{class_view_a3adee7bd79e0f4e5311f2347aecf9224}\label{class_view_a3adee7bd79e0f4e5311f2347aecf9224}} 
+\index{View@{View}!is\_paused@{is\_paused}}
+\index{is\_paused@{is\_paused}!View@{View}}
+\doxysubsubsection{\texorpdfstring{is\_paused}{is\_paused}}
+{\footnotesize\ttfamily bool View\+::is\+\_\+paused = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy gra jest zapauzowana. 
+
+\mbox{\Hypertarget{class_view_aed2203ee6c0016c78ee28e15c83729c5}\label{class_view_aed2203ee6c0016c78ee28e15c83729c5}} 
+\index{View@{View}!max\_hungry\_time@{max\_hungry\_time}}
+\index{max\_hungry\_time@{max\_hungry\_time}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_hungry\_time}{max\_hungry\_time}}
+{\footnotesize\ttfamily int View\+::max\+\_\+hungry\+\_\+time = board.\+get\+\_\+max\+\_\+hungry\+\_\+time()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna maksymalna długość czasu jaką robaki mogą chodzić po polach bez jedzenia. 
+
+\mbox{\Hypertarget{class_view_ac2eb6d296dab78a1d57b7ba9219c38d0}\label{class_view_ac2eb6d296dab78a1d57b7ba9219c38d0}} 
+\index{View@{View}!max\_hungry\_time\_text@{max\_hungry\_time\_text}}
+\index{max\_hungry\_time\_text@{max\_hungry\_time\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_hungry\_time\_text}{max\_hungry\_time\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::max\+\_\+hungry\+\_\+time\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst z aktualną maksymalną długością czasu jaką robaki mogą chodzić po polach bez jedzenia. 
+
+\mbox{\Hypertarget{class_view_a502c0777133e67928182d02d75bfe95a}\label{class_view_a502c0777133e67928182d02d75bfe95a}} 
+\index{View@{View}!max\_kids@{max\_kids}}
+\index{max\_kids@{max\_kids}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_kids}{max\_kids}}
+{\footnotesize\ttfamily int View\+::max\+\_\+kids = board.\+get\+\_\+max\+\_\+kids()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna maksymalna ilość dzieci jaką mogą mieć robaki. 
+
+\mbox{\Hypertarget{class_view_a7268064ff657abe1146ff4e33369d5c6}\label{class_view_a7268064ff657abe1146ff4e33369d5c6}} 
+\index{View@{View}!max\_kids\_text@{max\_kids\_text}}
+\index{max\_kids\_text@{max\_kids\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_kids\_text}{max\_kids\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::max\+\_\+kids\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst z aktualną maksymalną ilością dzieci jakie mogą mieć robaki. 
+
+\mbox{\Hypertarget{class_view_a4e7c884549c2632d5a9d0980590404e2}\label{class_view_a4e7c884549c2632d5a9d0980590404e2}} 
+\index{View@{View}!max\_length@{max\_length}}
+\index{max\_length@{max\_length}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_length}{max\_length}}
+{\footnotesize\ttfamily int View\+::max\+\_\+length = board.\+get\+\_\+max\+\_\+length()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna maksymalna długość robaków. 
+
+\mbox{\Hypertarget{class_view_a8e4cd2f4aa728ae3d976fe1d3a5840a2}\label{class_view_a8e4cd2f4aa728ae3d976fe1d3a5840a2}} 
+\index{View@{View}!max\_length\_text@{max\_length\_text}}
+\index{max\_length\_text@{max\_length\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{max\_length\_text}{max\_length\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::max\+\_\+length\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst z aktualną maksymalną długością robaków. 
+
+\mbox{\Hypertarget{class_view_a97bd9cbc2645727eee3b2579640f3333}\label{class_view_a97bd9cbc2645727eee3b2579640f3333}} 
+\index{View@{View}!no\_food\_legend@{no\_food\_legend}}
+\index{no\_food\_legend@{no\_food\_legend}!View@{View}}
+\doxysubsubsection{\texorpdfstring{no\_food\_legend}{no\_food\_legend}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape View\+::no\+\_\+food\+\_\+legend\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opis kwadracika z tym jak wygląda brak jedzenia na planszy. 
+
+\mbox{\Hypertarget{class_view_aad7f03d9c4c9af69b1dccf6561333593}\label{class_view_aad7f03d9c4c9af69b1dccf6561333593}} 
+\index{View@{View}!no\_food\_legend\_text@{no\_food\_legend\_text}}
+\index{no\_food\_legend\_text@{no\_food\_legend\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{no\_food\_legend\_text}{no\_food\_legend\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::no\+\_\+food\+\_\+legend\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kwadracik z legendą jak wygląda brak jedzenia na planszy. 
+
+\mbox{\Hypertarget{class_view_aa9c4ad79a885c64384806a2e7d602a7b}\label{class_view_aa9c4ad79a885c64384806a2e7d602a7b}} 
+\index{View@{View}!text@{text}}
+\index{text@{text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna która ma w sobie tekst wszystkich statystyk z menu. 
+
+\mbox{\Hypertarget{class_view_a92314479ce1abbd216afbca08de65296}\label{class_view_a92314479ce1abbd216afbca08de65296}} 
+\index{View@{View}!turns@{turns}}
+\index{turns@{turns}!View@{View}}
+\doxysubsubsection{\texorpdfstring{turns}{turns}}
+{\footnotesize\ttfamily int View\+::turns = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna ilość tur przez jakie przeszła symulacja. 
+
+\mbox{\Hypertarget{class_view_a1e5eb536db76cf7dbf07c927f27e4230}\label{class_view_a1e5eb536db76cf7dbf07c927f27e4230}} 
+\index{View@{View}!window@{window}}
+\index{window@{window}!View@{View}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window View\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Okno symulacji. 
+
+\mbox{\Hypertarget{class_view_a9a6b3c4799d393f4d40cd12b4b3578ce}\label{class_view_a9a6b3c4799d393f4d40cd12b4b3578ce}} 
+\index{View@{View}!worm\_legend@{worm\_legend}}
+\index{worm\_legend@{worm\_legend}!View@{View}}
+\doxysubsubsection{\texorpdfstring{worm\_legend}{worm\_legend}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape View\+::worm\+\_\+legend\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opis kwadracika z tym jak wygląda robak na planszy. 
+
+\mbox{\Hypertarget{class_view_ad9bd6c557fc452070876a4ea5e4849c6}\label{class_view_ad9bd6c557fc452070876a4ea5e4849c6}} 
+\index{View@{View}!worm\_legend\_text@{worm\_legend\_text}}
+\index{worm\_legend\_text@{worm\_legend\_text}!View@{View}}
+\doxysubsubsection{\texorpdfstring{worm\_legend\_text}{worm\_legend\_text}}
+{\footnotesize\ttfamily sf\+::\+Text View\+::worm\+\_\+legend\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kwadracik z legendą jak wygląda robak na planszy. 
+
+\mbox{\Hypertarget{class_view_a90fe97b4fba5e3c6a1511850e38de64f}\label{class_view_a90fe97b4fba5e3c6a1511850e38de64f}} 
+\index{View@{View}!worms\_amount@{worms\_amount}}
+\index{worms\_amount@{worms\_amount}!View@{View}}
+\doxysubsubsection{\texorpdfstring{worms\_amount}{worms\_amount}}
+{\footnotesize\ttfamily int View\+::worms\+\_\+amount = board.\+get\+\_\+worms\+\_\+amount()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna ilość robaków na planszy. 
+
+\mbox{\Hypertarget{class_view_a40a326aff0f04e9eaa97ae4390fcbaff}\label{class_view_a40a326aff0f04e9eaa97ae4390fcbaff}} 
+\index{View@{View}!worms\_avg\_length@{worms\_avg\_length}}
+\index{worms\_avg\_length@{worms\_avg\_length}!View@{View}}
+\doxysubsubsection{\texorpdfstring{worms\_avg\_length}{worms\_avg\_length}}
+{\footnotesize\ttfamily int View\+::worms\+\_\+avg\+\_\+length = board.\+get\+\_\+worms\+\_\+avg\+\_\+length()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna średnia długość robaków na planszy. 
+
+\mbox{\Hypertarget{class_view_a9bed8533a8735d0826abfd0419ffcd0a}\label{class_view_a9bed8533a8735d0826abfd0419ffcd0a}} 
+\index{View@{View}!worms\_avg\_living\_time@{worms\_avg\_living\_time}}
+\index{worms\_avg\_living\_time@{worms\_avg\_living\_time}!View@{View}}
+\doxysubsubsection{\texorpdfstring{worms\_avg\_living\_time}{worms\_avg\_living\_time}}
+{\footnotesize\ttfamily int View\+::worms\+\_\+avg\+\_\+living\+\_\+time = board.\+get\+\_\+worms\+\_\+avg\+\_\+living\+\_\+time()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna średnia długość życia robaków na planszy. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_view_8h}{View.\+h}}\item 
+\mbox{\hyperlink{_view_8cpp}{View.\+cpp}}\end{DoxyCompactItemize}

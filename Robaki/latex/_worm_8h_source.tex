@@ -1,0 +1,37 @@
+\hypertarget{_worm_8h_source}{}\doxysection{Worm.\+h}
+\mbox{\hyperlink{_worm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SIZE 30}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <SFML/Graphics/Color.hpp>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_worm}{Worm}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_ab7055c0bfecdbe8e44582d7c5283b657}{m\_max\_kids}} \{\};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a1ad0e2fa53914abcaf9b80cc7c23722d}{m\_max\_hungry\_time}} \{\};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a85bb84439fcb3910429cd69664910fdd}{m\_max\_length}} \{\};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_ab3a8ba354008a45a422fe6e65274b5b4}{m\_avg\_living\_time}} \{\};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a4142f4dbe62d52faf3f6cda589e0fb7b}{m\_hungry\_time}} = 0;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a58df7942bdf3876e6b273a4ae40d7ab2}{m\_max\_breeding\_time}} = 20;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a091def8fb520dfb1f5420db892f3d6f1}{m\_max\_living\_time}};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a9eb2d06d03c7fd922fb6a32858c4bd87}{m\_kids}} = 0;}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52     sf::Color \mbox{\hyperlink{class_worm_aed45f20567aa80c2296566d4e492dcf4}{color}};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_ab343a6abfc894888560f8491ac172537}{m\_breeding\_time}} = 20;}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_ad87c97e8c702f9b91bbcd7b25544046f}{m\_living\_time}} = 0;}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a4cbbf94479de34ea5ae019d664af2252}{m\_length}};}
+\DoxyCodeLine{68     std::vector<int> \mbox{\hyperlink{class_worm_af58644174dc28c4f7391ca07a0d8108f}{m\_positions}};}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_worm_aedc5e751043cd549a74e21929eb77506}{Worm}}(\textcolor{keywordtype}{int} position, \textcolor{keywordtype}{int} max\_kids, \textcolor{keywordtype}{int} max\_hungry\_time, \textcolor{keywordtype}{int} max\_length, \textcolor{keywordtype}{int} avg\_living\_time);}
+\DoxyCodeLine{81     \mbox{\hyperlink{class_worm_ade7672966c551bb91663ed03e06f297f}{\string~Worm}}();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a70c42f89aec290abe1414d47748974ef}{get\_first\_position}}();}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_worm_a628a7ce7b75d5e1449ea8e6a6de40e5c}{move}}(\textcolor{keywordtype}{bool} worm\_board[], \textcolor{keywordtype}{int} food\_board[]);}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_worm_a3ca9ed847389e05d006c4b10ab0db353}{make\_next\_move}}(\textcolor{keywordtype}{bool} worm\_board[], \textcolor{keywordtype}{int} food\_board[], \textcolor{keywordtype}{int} direction);}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_worm_a92a509181e2b8de1fb59738779001ea3}{next\_position}}(\textcolor{keywordtype}{int} current\_position, \textcolor{keywordtype}{int} direction);}
+\DoxyCodeLine{110     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_worm_a0a842a68a75413762081e8009ac8deba}{is\_dead}}();}
+\DoxyCodeLine{115     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_worm_ac310d959242ae886db05f85b910291d8}{is\_ready\_for\_breeding}}();}
+\DoxyCodeLine{116 \};}
+
+\end{DoxyCode}

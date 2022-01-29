@@ -1,0 +1,42 @@
+\hypertarget{_board_8h_source}{}\doxysection{Board.\+h}
+\mbox{\hyperlink{_board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SIZE 30}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_worm_8h}{Worm.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_ac46c9251ff07a0ce2abdba902e558269}{worm\_board}}[\mbox{\hyperlink{_board_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} * \mbox{\hyperlink{_board_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}];}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a2cfd02d35e143ba94083211caf103083}{food\_board}}[\mbox{\hyperlink{_board_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} * \mbox{\hyperlink{_board_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}];}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a1fa2f7f40700a68248db2d37c76a2473}{food\_recovery\_time}} = 50;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a8ca4a30906444e2b02de158ff87a0d68}{m\_max\_kids}} = 3;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_aa9a0b0c76fe8950e21138c638e92fdd6}{m\_max\_hungry\_time}} = 10;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a0c243a1d90c582fe90e279c2d6a58391}{m\_max\_length}} = 15;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_ae7e4b8486b9073b4ab4df4f522ac9dae}{m\_avg\_living\_time}} = 80;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_ac29e4c5447c80dbd07bb2c53497c7174}{all\_worms\_amount}} = 0;}
+\DoxyCodeLine{51     std::vector<Worm> \mbox{\hyperlink{class_board_a9809b04127512f2143e738f23c6eac3e}{worms\_on\_board}};}
+\DoxyCodeLine{55     std::vector<sf::RectangleShape> \mbox{\hyperlink{class_board_a4001900d1b0c67f9b9fbda4dc2612179}{graphics\_board}};}
+\DoxyCodeLine{59     \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_ab97c682096fcd9d005d133b28a754a31}{get\_worms\_amount}}();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_board_acb42131403dc3f0e5778be243f96d1b7}{get\_worms\_avg\_living\_time}}();}
+\DoxyCodeLine{74     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_board_a51cd4e7cfd30cb101eacc027304e70af}{get\_worms\_avg\_length}}();}
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a627b912d564db73fd9ab689c8321702f}{clear\_worm\_board}}();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_aa659818ccb554076e610669c3c75f07b}{fill\_boards}}();}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_ab6b16271ff43e0b3a58111948da593b1}{add\_worm}}(\textcolor{keywordtype}{int} position, \textcolor{keywordtype}{bool} is\_breeding);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a489de35872f811fdf18857fc1fbc3376}{init\_graphics\_board}}();}
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_aa170cb05bb38de48e19a72b51d898eca}{update}}();}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_aa4e6c08885a611b32a67d5aef278beec}{update\_graphics\_board}}();}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a391bc47e10e22c5f415368db59e871bd}{update\_food\_board}}();}
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a34dd5210490b31a47dc525345bcc3cd4}{update\_worm\_board}}();}
+\DoxyCodeLine{113     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_acf2b73e0597b87e155c5c92d5b734eb4}{get\_max\_kids}}();}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_ab15f4dac3166cf7fb0d60e01092f989c}{get\_max\_hungry\_time}}();}
+\DoxyCodeLine{123     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_aa57854b5873c77f8c3ed97ecde1c180b}{get\_max\_length}}();}
+\DoxyCodeLine{128     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a935620c9198ffec4d6bfa59517fa0793}{get\_avg\_living\_time}}();}
+\DoxyCodeLine{133     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_a097be9e3186cfc7cd9fc1456b5a0239d}{get\_food\_recovery\_time}}();}
+\DoxyCodeLine{134 \};}
+
+\end{DoxyCode}

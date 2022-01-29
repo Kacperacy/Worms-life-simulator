@@ -1,0 +1,45 @@
+\hypertarget{_view_8h_source}{}\doxysection{View.\+h}
+\mbox{\hyperlink{_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_board_8h}{Board.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_view}{View}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{14     sf::Clock \mbox{\hyperlink{class_view_a27bcb0f4298971925c4a5548f9bbea09}{clock}};}
+\DoxyCodeLine{18     sf::Font \mbox{\hyperlink{class_view_a454dcb63cf5db159d47aedc50836d262}{font}};}
+\DoxyCodeLine{22     sf::Text \mbox{\hyperlink{class_view_aa9c4ad79a885c64384806a2e7d602a7b}{text}};}
+\DoxyCodeLine{26     sf::RectangleShape \mbox{\hyperlink{class_view_adb6267dabb201daf1a3f8385126b485d}{background}};}
+\DoxyCodeLine{30     sf::Text \mbox{\hyperlink{class_view_ad9bd6c557fc452070876a4ea5e4849c6}{worm\_legend\_text}};}
+\DoxyCodeLine{34     sf::RectangleShape \mbox{\hyperlink{class_view_a9a6b3c4799d393f4d40cd12b4b3578ce}{worm\_legend}};}
+\DoxyCodeLine{38     sf::Text \mbox{\hyperlink{class_view_a3e947c59eb1be8c5e2a74e251ace576a}{food\_legend\_text}};}
+\DoxyCodeLine{42     sf::RectangleShape \mbox{\hyperlink{class_view_a9f64a3d5216aa93cc1757e834932b8f4}{food\_legend}};}
+\DoxyCodeLine{46     sf::Text \mbox{\hyperlink{class_view_aad7f03d9c4c9af69b1dccf6561333593}{no\_food\_legend\_text}};}
+\DoxyCodeLine{50     sf::RectangleShape \mbox{\hyperlink{class_view_a97bd9cbc2645727eee3b2579640f3333}{no\_food\_legend}};}
+\DoxyCodeLine{54     sf::Text \mbox{\hyperlink{class_view_a7268064ff657abe1146ff4e33369d5c6}{max\_kids\_text}};}
+\DoxyCodeLine{58     sf::Text \mbox{\hyperlink{class_view_ac2eb6d296dab78a1d57b7ba9219c38d0}{max\_hungry\_time\_text}};}
+\DoxyCodeLine{62     sf::Text \mbox{\hyperlink{class_view_a8e4cd2f4aa728ae3d976fe1d3a5840a2}{max\_length\_text}};}
+\DoxyCodeLine{66     sf::Text \mbox{\hyperlink{class_view_ada4e79abb9d71fdfaecbb5800fe707f4}{avg\_living\_time\_text}};}
+\DoxyCodeLine{70     sf::Text \mbox{\hyperlink{class_view_a273b1a62a16cc2772bf3cbef36809412}{food\_recovery\_time\_text}};}
+\DoxyCodeLine{74     sf::RenderWindow \mbox{\hyperlink{class_view_a1e5eb536db76cf7dbf07c927f27e4230}{window}};}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a502c0777133e67928182d02d75bfe95a}{max\_kids}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_acf2b73e0597b87e155c5c92d5b734eb4}{get\_max\_kids}}();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_aed2203ee6c0016c78ee28e15c83729c5}{max\_hungry\_time}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_ab15f4dac3166cf7fb0d60e01092f989c}{get\_max\_hungry\_time}}();}
+\DoxyCodeLine{90     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a4e7c884549c2632d5a9d0980590404e2}{max\_length}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_aa57854b5873c77f8c3ed97ecde1c180b}{get\_max\_length}}();}
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a19087874e9c8bdef962be860f0af5aec}{avg\_living\_time}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_a935620c9198ffec4d6bfa59517fa0793}{get\_avg\_living\_time}}();}
+\DoxyCodeLine{98     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a9657a45cbc297ed337cb17a4046ff5f9}{food\_recovery\_time}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_a097be9e3186cfc7cd9fc1456b5a0239d}{get\_food\_recovery\_time}}();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a92314479ce1abbd216afbca08de65296}{turns}} = 1;}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a90fe97b4fba5e3c6a1511850e38de64f}{worms\_amount}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_ab97c682096fcd9d005d133b28a754a31}{get\_worms\_amount}}();}
+\DoxyCodeLine{110     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a9bed8533a8735d0826abfd0419ffcd0a}{worms\_avg\_living\_time}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_acb42131403dc3f0e5778be243f96d1b7}{get\_worms\_avg\_living\_time}}();}
+\DoxyCodeLine{114     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a40a326aff0f04e9eaa97ae4390fcbaff}{worms\_avg\_length}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_a51cd4e7cfd30cb101eacc027304e70af}{get\_worms\_avg\_length}}();}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a8d63bd9a32945f8e59dfe2661967b166}{all\_worms\_amount}} = \mbox{\hyperlink{class_view_a5c2fa1393dfbe4fefd072b154895c517}{board}}.\mbox{\hyperlink{class_board_ac29e4c5447c80dbd07bb2c53497c7174}{all\_worms\_amount}};}
+\DoxyCodeLine{122     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_view_a3adee7bd79e0f4e5311f2347aecf9224}{is\_paused}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{123 \textcolor{keyword}{public}:}
+\DoxyCodeLine{127     \mbox{\hyperlink{class_view_a44ad60a768422d3fa8fbd7576950080a}{View}}();}
+\DoxyCodeLine{131     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_af2ac567eb0f48d3dbf2110e8393d25ea}{main\_loop}}();}
+\DoxyCodeLine{135     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a03c764bd42440fd45d025b61a4e09206}{draw\_menu}}();}
+\DoxyCodeLine{136 \};}
+
+\end{DoxyCode}

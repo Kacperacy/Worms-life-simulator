@@ -1,0 +1,393 @@
+\hypertarget{class_board}{}\doxysection{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+
+
+Klasa która reprezentuje plansze po której poruszają się robaki.  
+
+
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ab97c682096fcd9d005d133b28a754a31}{get\+\_\+worms\+\_\+amount}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ma na celu zwracać liczbę robaków które aktualnie znajdują się na planszy. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_board_acb42131403dc3f0e5778be243f96d1b7}{get\+\_\+worms\+\_\+avg\+\_\+living\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ma na celu zwracać średnią długość życia robaków które aktualnie znajdują się na planszy. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_board_a51cd4e7cfd30cb101eacc027304e70af}{get\+\_\+worms\+\_\+avg\+\_\+length}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ma na celu zwracać średnią długość robaków które aktualnie znajdują się na planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a627b912d564db73fd9ab689c8321702f}{clear\+\_\+worm\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ustawia całą tablicę z robakami na false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_aa659818ccb554076e610669c3c75f07b}{fill\+\_\+boards}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ustawia całą tablicę z robakami na false i tablicę z jedzeniem na 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_ab6b16271ff43e0b3a58111948da593b1}{add\+\_\+worm}} (int position, bool is\+\_\+breeding)
+\begin{DoxyCompactList}\small\item\em Metoda która dodaje robaka na plansze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a489de35872f811fdf18857fc1fbc3376}{init\+\_\+graphics\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która dodaje wszystkie Rectangle\+Shape do wektora i inicjuje ich pozycje i kolor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_aa170cb05bb38de48e19a72b51d898eca}{update}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ma na celu zaktualizować to co dzieje się na planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_aa4e6c08885a611b32a67d5aef278beec}{update\+\_\+graphics\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która ma na celu zaktualizować wszystkie Rectangle\+Shape zależnie od tego co dzieje się na planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a391bc47e10e22c5f415368db59e871bd}{update\+\_\+food\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która aktualizuje tablice z jedzeniem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a34dd5210490b31a47dc525345bcc3cd4}{update\+\_\+worm\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która aktualizuje tablice z robakami. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_acf2b73e0597b87e155c5c92d5b734eb4}{get\+\_\+max\+\_\+kids}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca aktualną maksymalną liczbę dzieci jaką może mieć robak. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ab15f4dac3166cf7fb0d60e01092f989c}{get\+\_\+max\+\_\+hungry\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca aktualną długość czasu jaką robak może chodzić po polach bez jedzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_aa57854b5873c77f8c3ed97ecde1c180b}{get\+\_\+max\+\_\+length}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca aktualną maksymalną długość robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a935620c9198ffec4d6bfa59517fa0793}{get\+\_\+avg\+\_\+living\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca aktualną maksymalną długość życia robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a097be9e3186cfc7cd9fc1456b5a0239d}{get\+\_\+food\+\_\+recovery\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca aktualną długość odnawiania się jedzenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a1fa2f7f40700a68248db2d37c76a2473}{food\+\_\+recovery\+\_\+time}} = 50
+\begin{DoxyCompactList}\small\item\em Zmienna która określa jak długo będzie odrastać jedzenie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a8ca4a30906444e2b02de158ff87a0d68}{m\+\_\+max\+\_\+kids}} = 3
+\begin{DoxyCompactList}\small\item\em Zmienna która określa maksymalną ilość dzieci które może mieć jeden robak. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_aa9a0b0c76fe8950e21138c638e92fdd6}{m\+\_\+max\+\_\+hungry\+\_\+time}} = 10
+\begin{DoxyCompactList}\small\item\em Zmienna która określa maksymalny okres czasu w którym robak może chodzić po polach bez jedzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a0c243a1d90c582fe90e279c2d6a58391}{m\+\_\+max\+\_\+length}} = 15
+\begin{DoxyCompactList}\small\item\em Zmienna która określa maksymalną długość robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ae7e4b8486b9073b4ab4df4f522ac9dae}{m\+\_\+avg\+\_\+living\+\_\+time}} = 80
+\begin{DoxyCompactList}\small\item\em Zmienna która określa maksymalną długość życia robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac29e4c5447c80dbd07bb2c53497c7174}{all\+\_\+worms\+\_\+amount}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna która przechowuje ilość robaków które pojawiły się przez całą symulację. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_worm}{Worm}} $>$ \mbox{\hyperlink{class_board_a9809b04127512f2143e738f23c6eac3e}{worms\+\_\+on\+\_\+board}}
+\begin{DoxyCompactList}\small\item\em Wektor który przechowuje obiekty wszystkich robaków znajdujących się na planszy. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$ \mbox{\hyperlink{class_board_a4001900d1b0c67f9b9fbda4dc2612179}{graphics\+\_\+board}}
+\begin{DoxyCompactList}\small\item\em Wektor przechowujący wszystkie Rectangle\+Shape które co klatkę są na nowo rysowane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_board_ac46c9251ff07a0ce2abdba902e558269}{worm\+\_\+board}} \mbox{[}\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} $\ast$\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica o wielkości planszy z robakami. Dla każdego pola przechowuje zmienną typu bool która określa czy na danym polu znajduje się robak. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a2cfd02d35e143ba94083211caf103083}{food\+\_\+board}} \mbox{[}\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} $\ast$\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tbalica o wielkości planszy z robakami. Dla każdego pola przechowuje zmienną typu int która określa ile czasu jedzenie na danym polu będzie odrastać. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa która reprezentuje plansze po której poruszają się robaki. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_ab6b16271ff43e0b3a58111948da593b1}\label{class_board_ab6b16271ff43e0b3a58111948da593b1}} 
+\index{Board@{Board}!add\_worm@{add\_worm}}
+\index{add\_worm@{add\_worm}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{add\_worm()}{add\_worm()}}
+{\footnotesize\ttfamily void Board\+::add\+\_\+worm (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{bool}]{is\+\_\+breeding }\end{DoxyParamCaption})}
+
+
+
+Metoda która dodaje robaka na plansze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Pozycja na której ma być dodany robak. \\
+\hline
+{\em is\+\_\+breeding} & Czy dany robak powstaje w wyniku rodzenia. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_a627b912d564db73fd9ab689c8321702f}\label{class_board_a627b912d564db73fd9ab689c8321702f}} 
+\index{Board@{Board}!clear\_worm\_board@{clear\_worm\_board}}
+\index{clear\_worm\_board@{clear\_worm\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{clear\_worm\_board()}{clear\_worm\_board()}}
+{\footnotesize\ttfamily void Board\+::clear\+\_\+worm\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ustawia całą tablicę z robakami na false. 
+
+\mbox{\Hypertarget{class_board_aa659818ccb554076e610669c3c75f07b}\label{class_board_aa659818ccb554076e610669c3c75f07b}} 
+\index{Board@{Board}!fill\_boards@{fill\_boards}}
+\index{fill\_boards@{fill\_boards}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{fill\_boards()}{fill\_boards()}}
+{\footnotesize\ttfamily void Board\+::fill\+\_\+boards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ustawia całą tablicę z robakami na false i tablicę z jedzeniem na 0. 
+
+\mbox{\Hypertarget{class_board_a935620c9198ffec4d6bfa59517fa0793}\label{class_board_a935620c9198ffec4d6bfa59517fa0793}} 
+\index{Board@{Board}!get\_avg\_living\_time@{get\_avg\_living\_time}}
+\index{get\_avg\_living\_time@{get\_avg\_living\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_avg\_living\_time()}{get\_avg\_living\_time()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+avg\+\_\+living\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca aktualną maksymalną długość życia robaka. 
+
+\begin{DoxyReturn}{Returns}
+Maksymalna długość życia robaka. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a097be9e3186cfc7cd9fc1456b5a0239d}\label{class_board_a097be9e3186cfc7cd9fc1456b5a0239d}} 
+\index{Board@{Board}!get\_food\_recovery\_time@{get\_food\_recovery\_time}}
+\index{get\_food\_recovery\_time@{get\_food\_recovery\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_food\_recovery\_time()}{get\_food\_recovery\_time()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+food\+\_\+recovery\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca aktualną długość odnawiania się jedzenia. 
+
+\begin{DoxyReturn}{Returns}
+Długość odnawiania się jedzenia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ab15f4dac3166cf7fb0d60e01092f989c}\label{class_board_ab15f4dac3166cf7fb0d60e01092f989c}} 
+\index{Board@{Board}!get\_max\_hungry\_time@{get\_max\_hungry\_time}}
+\index{get\_max\_hungry\_time@{get\_max\_hungry\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_max\_hungry\_time()}{get\_max\_hungry\_time()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+max\+\_\+hungry\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca aktualną długość czasu jaką robak może chodzić po polach bez jedzenia. 
+
+\begin{DoxyReturn}{Returns}
+Długość czasu jaką robak może chodzić po polach bez jedzenia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_acf2b73e0597b87e155c5c92d5b734eb4}\label{class_board_acf2b73e0597b87e155c5c92d5b734eb4}} 
+\index{Board@{Board}!get\_max\_kids@{get\_max\_kids}}
+\index{get\_max\_kids@{get\_max\_kids}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_max\_kids()}{get\_max\_kids()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+max\+\_\+kids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca aktualną maksymalną liczbę dzieci jaką może mieć robak. 
+
+\begin{DoxyReturn}{Returns}
+Maksymalna ilość dzieci które może mieć jeden robak. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_aa57854b5873c77f8c3ed97ecde1c180b}\label{class_board_aa57854b5873c77f8c3ed97ecde1c180b}} 
+\index{Board@{Board}!get\_max\_length@{get\_max\_length}}
+\index{get\_max\_length@{get\_max\_length}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_max\_length()}{get\_max\_length()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+max\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca aktualną maksymalną długość robaka. 
+
+\begin{DoxyReturn}{Returns}
+Maksymalna długość robaka. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ab97c682096fcd9d005d133b28a754a31}\label{class_board_ab97c682096fcd9d005d133b28a754a31}} 
+\index{Board@{Board}!get\_worms\_amount@{get\_worms\_amount}}
+\index{get\_worms\_amount@{get\_worms\_amount}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_worms\_amount()}{get\_worms\_amount()}}
+{\footnotesize\ttfamily int Board\+::get\+\_\+worms\+\_\+amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ma na celu zwracać liczbę robaków które aktualnie znajdują się na planszy. 
+
+\begin{DoxyReturn}{Returns}
+Ilość robaków na planszy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a51cd4e7cfd30cb101eacc027304e70af}\label{class_board_a51cd4e7cfd30cb101eacc027304e70af}} 
+\index{Board@{Board}!get\_worms\_avg\_length@{get\_worms\_avg\_length}}
+\index{get\_worms\_avg\_length@{get\_worms\_avg\_length}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_worms\_avg\_length()}{get\_worms\_avg\_length()}}
+{\footnotesize\ttfamily double Board\+::get\+\_\+worms\+\_\+avg\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ma na celu zwracać średnią długość robaków które aktualnie znajdują się na planszy. 
+
+\begin{DoxyReturn}{Returns}
+Średnia długoś robaków które aktualnie znajdują się na planszy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_acb42131403dc3f0e5778be243f96d1b7}\label{class_board_acb42131403dc3f0e5778be243f96d1b7}} 
+\index{Board@{Board}!get\_worms\_avg\_living\_time@{get\_worms\_avg\_living\_time}}
+\index{get\_worms\_avg\_living\_time@{get\_worms\_avg\_living\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_worms\_avg\_living\_time()}{get\_worms\_avg\_living\_time()}}
+{\footnotesize\ttfamily double Board\+::get\+\_\+worms\+\_\+avg\+\_\+living\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ma na celu zwracać średnią długość życia robaków które aktualnie znajdują się na planszy. 
+
+\begin{DoxyReturn}{Returns}
+Średnia długoś życia robaków które aktualnie znajdują się na planszy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a489de35872f811fdf18857fc1fbc3376}\label{class_board_a489de35872f811fdf18857fc1fbc3376}} 
+\index{Board@{Board}!init\_graphics\_board@{init\_graphics\_board}}
+\index{init\_graphics\_board@{init\_graphics\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{init\_graphics\_board()}{init\_graphics\_board()}}
+{\footnotesize\ttfamily void Board\+::init\+\_\+graphics\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która dodaje wszystkie Rectangle\+Shape do wektora i inicjuje ich pozycje i kolor. 
+
+\mbox{\Hypertarget{class_board_aa170cb05bb38de48e19a72b51d898eca}\label{class_board_aa170cb05bb38de48e19a72b51d898eca}} 
+\index{Board@{Board}!update@{update}}
+\index{update@{update}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Board\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ma na celu zaktualizować to co dzieje się na planszy. 
+
+\mbox{\Hypertarget{class_board_a391bc47e10e22c5f415368db59e871bd}\label{class_board_a391bc47e10e22c5f415368db59e871bd}} 
+\index{Board@{Board}!update\_food\_board@{update\_food\_board}}
+\index{update\_food\_board@{update\_food\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{update\_food\_board()}{update\_food\_board()}}
+{\footnotesize\ttfamily void Board\+::update\+\_\+food\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która aktualizuje tablice z jedzeniem. 
+
+\mbox{\Hypertarget{class_board_aa4e6c08885a611b32a67d5aef278beec}\label{class_board_aa4e6c08885a611b32a67d5aef278beec}} 
+\index{Board@{Board}!update\_graphics\_board@{update\_graphics\_board}}
+\index{update\_graphics\_board@{update\_graphics\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{update\_graphics\_board()}{update\_graphics\_board()}}
+{\footnotesize\ttfamily void Board\+::update\+\_\+graphics\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która ma na celu zaktualizować wszystkie Rectangle\+Shape zależnie od tego co dzieje się na planszy. 
+
+\mbox{\Hypertarget{class_board_a34dd5210490b31a47dc525345bcc3cd4}\label{class_board_a34dd5210490b31a47dc525345bcc3cd4}} 
+\index{Board@{Board}!update\_worm\_board@{update\_worm\_board}}
+\index{update\_worm\_board@{update\_worm\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{update\_worm\_board()}{update\_worm\_board()}}
+{\footnotesize\ttfamily void Board\+::update\+\_\+worm\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która aktualizuje tablice z robakami. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_board_ac29e4c5447c80dbd07bb2c53497c7174}\label{class_board_ac29e4c5447c80dbd07bb2c53497c7174}} 
+\index{Board@{Board}!all\_worms\_amount@{all\_worms\_amount}}
+\index{all\_worms\_amount@{all\_worms\_amount}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{all\_worms\_amount}{all\_worms\_amount}}
+{\footnotesize\ttfamily int Board\+::all\+\_\+worms\+\_\+amount = 0}
+
+
+
+Zmienna która przechowuje ilość robaków które pojawiły się przez całą symulację. 
+
+\mbox{\Hypertarget{class_board_a2cfd02d35e143ba94083211caf103083}\label{class_board_a2cfd02d35e143ba94083211caf103083}} 
+\index{Board@{Board}!food\_board@{food\_board}}
+\index{food\_board@{food\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{food\_board}{food\_board}}
+{\footnotesize\ttfamily int Board\+::food\+\_\+board\mbox{[}\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} $\ast$\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tbalica o wielkości planszy z robakami. Dla każdego pola przechowuje zmienną typu int która określa ile czasu jedzenie na danym polu będzie odrastać. 
+
+\mbox{\Hypertarget{class_board_a1fa2f7f40700a68248db2d37c76a2473}\label{class_board_a1fa2f7f40700a68248db2d37c76a2473}} 
+\index{Board@{Board}!food\_recovery\_time@{food\_recovery\_time}}
+\index{food\_recovery\_time@{food\_recovery\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{food\_recovery\_time}{food\_recovery\_time}}
+{\footnotesize\ttfamily int Board\+::food\+\_\+recovery\+\_\+time = 50}
+
+
+
+Zmienna która określa jak długo będzie odrastać jedzenie. 
+
+\mbox{\Hypertarget{class_board_a4001900d1b0c67f9b9fbda4dc2612179}\label{class_board_a4001900d1b0c67f9b9fbda4dc2612179}} 
+\index{Board@{Board}!graphics\_board@{graphics\_board}}
+\index{graphics\_board@{graphics\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{graphics\_board}{graphics\_board}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Rectangle\+Shape$>$ Board\+::graphics\+\_\+board}
+
+
+
+Wektor przechowujący wszystkie Rectangle\+Shape które co klatkę są na nowo rysowane. 
+
+\mbox{\Hypertarget{class_board_ae7e4b8486b9073b4ab4df4f522ac9dae}\label{class_board_ae7e4b8486b9073b4ab4df4f522ac9dae}} 
+\index{Board@{Board}!m\_avg\_living\_time@{m\_avg\_living\_time}}
+\index{m\_avg\_living\_time@{m\_avg\_living\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{m\_avg\_living\_time}{m\_avg\_living\_time}}
+{\footnotesize\ttfamily int Board\+::m\+\_\+avg\+\_\+living\+\_\+time = 80}
+
+
+
+Zmienna która określa maksymalną długość życia robaka. 
+
+\mbox{\Hypertarget{class_board_aa9a0b0c76fe8950e21138c638e92fdd6}\label{class_board_aa9a0b0c76fe8950e21138c638e92fdd6}} 
+\index{Board@{Board}!m\_max\_hungry\_time@{m\_max\_hungry\_time}}
+\index{m\_max\_hungry\_time@{m\_max\_hungry\_time}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{m\_max\_hungry\_time}{m\_max\_hungry\_time}}
+{\footnotesize\ttfamily int Board\+::m\+\_\+max\+\_\+hungry\+\_\+time = 10}
+
+
+
+Zmienna która określa maksymalny okres czasu w którym robak może chodzić po polach bez jedzenia. 
+
+\mbox{\Hypertarget{class_board_a8ca4a30906444e2b02de158ff87a0d68}\label{class_board_a8ca4a30906444e2b02de158ff87a0d68}} 
+\index{Board@{Board}!m\_max\_kids@{m\_max\_kids}}
+\index{m\_max\_kids@{m\_max\_kids}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{m\_max\_kids}{m\_max\_kids}}
+{\footnotesize\ttfamily int Board\+::m\+\_\+max\+\_\+kids = 3}
+
+
+
+Zmienna która określa maksymalną ilość dzieci które może mieć jeden robak. 
+
+\mbox{\Hypertarget{class_board_a0c243a1d90c582fe90e279c2d6a58391}\label{class_board_a0c243a1d90c582fe90e279c2d6a58391}} 
+\index{Board@{Board}!m\_max\_length@{m\_max\_length}}
+\index{m\_max\_length@{m\_max\_length}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{m\_max\_length}{m\_max\_length}}
+{\footnotesize\ttfamily int Board\+::m\+\_\+max\+\_\+length = 15}
+
+
+
+Zmienna która określa maksymalną długość robaka. 
+
+\mbox{\Hypertarget{class_board_ac46c9251ff07a0ce2abdba902e558269}\label{class_board_ac46c9251ff07a0ce2abdba902e558269}} 
+\index{Board@{Board}!worm\_board@{worm\_board}}
+\index{worm\_board@{worm\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{worm\_board}{worm\_board}}
+{\footnotesize\ttfamily bool Board\+::worm\+\_\+board\mbox{[}\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}} $\ast$\mbox{\hyperlink{_worm_8h_a70ed59adcb4159ac551058053e649640}{SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tablica o wielkości planszy z robakami. Dla każdego pola przechowuje zmienną typu bool która określa czy na danym polu znajduje się robak. 
+
+\mbox{\Hypertarget{class_board_a9809b04127512f2143e738f23c6eac3e}\label{class_board_a9809b04127512f2143e738f23c6eac3e}} 
+\index{Board@{Board}!worms\_on\_board@{worms\_on\_board}}
+\index{worms\_on\_board@{worms\_on\_board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{worms\_on\_board}{worms\_on\_board}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_worm}{Worm}}$>$ Board\+::worms\+\_\+on\+\_\+board}
+
+
+
+Wektor który przechowuje obiekty wszystkich robaków znajdujących się na planszy. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_board_8h}{Board.\+h}}\item 
+\mbox{\hyperlink{_board_8cpp}{Board.\+cpp}}\end{DoxyCompactItemize}

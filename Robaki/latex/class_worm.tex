@@ -1,0 +1,335 @@
+\hypertarget{class_worm}{}\doxysection{Worm Class Reference}
+\label{class_worm}\index{Worm@{Worm}}
+
+
+Klasa przedstawiająca robaka.  
+
+
+
+
+{\ttfamily \#include $<$Worm.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_worm_aedc5e751043cd549a74e21929eb77506}{Worm}} (int position, int max\+\_\+kids, int max\+\_\+hungry\+\_\+time, int max\+\_\+length, int avg\+\_\+living\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_worm_ade7672966c551bb91663ed03e06f297f}{$\sim$\+Worm}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a70c42f89aec290abe1414d47748974ef}{get\+\_\+first\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca pozycję pierwszej części robaka (głowy). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_worm_a628a7ce7b75d5e1449ea8e6a6de40e5c}{move}} (bool worm\+\_\+board\mbox{[}$\,$\mbox{]}, int food\+\_\+board\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Metoda która porusza robakiem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_worm_a3ca9ed847389e05d006c4b10ab0db353}{make\+\_\+next\+\_\+move}} (bool worm\+\_\+board\mbox{[}$\,$\mbox{]}, int food\+\_\+board\mbox{[}$\,$\mbox{]}, int direction)
+\begin{DoxyCompactList}\small\item\em Metoda która porusza robakiem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a92a509181e2b8de1fb59738779001ea3}{next\+\_\+position}} (int current\+\_\+position, int direction)
+\begin{DoxyCompactList}\small\item\em Metoda która zwraca następną pozycje na którą chce poruszyć się robak. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_worm_a0a842a68a75413762081e8009ac8deba}{is\+\_\+dead}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która sprawdza czy robak powinien dalej żyć. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_worm_ac310d959242ae886db05f85b910291d8}{is\+\_\+ready\+\_\+for\+\_\+breeding}} ()
+\begin{DoxyCompactList}\small\item\em Metoda która sprawdza czy robak jest gotowy do urodzenia nowego robaka. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Color \mbox{\hyperlink{class_worm_aed45f20567aa80c2296566d4e492dcf4}{color}}
+\begin{DoxyCompactList}\small\item\em Kolor robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_ab343a6abfc894888560f8491ac172537}{m\+\_\+breeding\+\_\+time}} = 20
+\begin{DoxyCompactList}\small\item\em Aktualny czas od kiedy ten robak urodził nowego robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_ad87c97e8c702f9b91bbcd7b25544046f}{m\+\_\+living\+\_\+time}} = 0
+\begin{DoxyCompactList}\small\item\em Aktualna długość życia tego robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a4cbbf94479de34ea5ae019d664af2252}{m\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Aktualna długość tego robaka. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_worm_af58644174dc28c4f7391ca07a0d8108f}{m\+\_\+positions}}
+\begin{DoxyCompactList}\small\item\em Wektor z pozycjami na których znajdują się części robaka. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_worm_ab7055c0bfecdbe8e44582d7c5283b657}{m\+\_\+max\+\_\+kids}} \{\}
+\begin{DoxyCompactList}\small\item\em Maksymalna ilość dzieci jaką może mieć ten robak. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a1ad0e2fa53914abcaf9b80cc7c23722d}{m\+\_\+max\+\_\+hungry\+\_\+time}} \{\}
+\begin{DoxyCompactList}\small\item\em Maksymalna długość czasu jaką ten robak może chodzić po polach bez jedzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a85bb84439fcb3910429cd69664910fdd}{m\+\_\+max\+\_\+length}} \{\}
+\begin{DoxyCompactList}\small\item\em Maksymalna długość tego robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_ab3a8ba354008a45a422fe6e65274b5b4}{m\+\_\+avg\+\_\+living\+\_\+time}} \{\}
+\begin{DoxyCompactList}\small\item\em Maksymalna długość życia tego robaka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a4142f4dbe62d52faf3f6cda589e0fb7b}{m\+\_\+hungry\+\_\+time}} = 0
+\begin{DoxyCompactList}\small\item\em Aktualna długość czasu jaką ten robak porusza się bez jedzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a58df7942bdf3876e6b273a4ae40d7ab2}{m\+\_\+max\+\_\+breeding\+\_\+time}} = 20
+\begin{DoxyCompactList}\small\item\em Długość czasu jaką robak musi odczekać przed następnym urodzeniem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a091def8fb520dfb1f5420db892f3d6f1}{m\+\_\+max\+\_\+living\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Maksymalna długość życia tego robaka +-\/ 10. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_worm_a9eb2d06d03c7fd922fb6a32858c4bd87}{m\+\_\+kids}} = 0
+\begin{DoxyCompactList}\small\item\em Aktualna ilość dzieci jaką urodził ten robak. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa przedstawiająca robaka. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_worm_aedc5e751043cd549a74e21929eb77506}\label{class_worm_aedc5e751043cd549a74e21929eb77506}} 
+\index{Worm@{Worm}!Worm@{Worm}}
+\index{Worm@{Worm}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{Worm()}{Worm()}}
+{\footnotesize\ttfamily Worm\+::\+Worm (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{int}]{max\+\_\+kids,  }\item[{int}]{max\+\_\+hungry\+\_\+time,  }\item[{int}]{max\+\_\+length,  }\item[{int}]{avg\+\_\+living\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Pozycja na której tworzony jest robak. \\
+\hline
+{\em max\+\_\+kids} & Maksymalna ilość dzieci którą może mieć ten robak. \\
+\hline
+{\em max\+\_\+hungry\+\_\+time} & Maksymalna długość czasu jaką ten robak może chodzić po polach bez jedzenia. \\
+\hline
+{\em max\+\_\+length} & Maksymalna długość tego robaka. \\
+\hline
+{\em avg\+\_\+living\+\_\+time} & Maksymalna długość życia tego robaka. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_worm_ade7672966c551bb91663ed03e06f297f}\label{class_worm_ade7672966c551bb91663ed03e06f297f}} 
+\index{Worm@{Worm}!````~Worm@{$\sim$Worm}}
+\index{````~Worm@{$\sim$Worm}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{$\sim$Worm()}{~Worm()}}
+{\footnotesize\ttfamily Worm\+::$\sim$\+Worm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_worm_a70c42f89aec290abe1414d47748974ef}\label{class_worm_a70c42f89aec290abe1414d47748974ef}} 
+\index{Worm@{Worm}!get\_first\_position@{get\_first\_position}}
+\index{get\_first\_position@{get\_first\_position}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{get\_first\_position()}{get\_first\_position()}}
+{\footnotesize\ttfamily int Worm\+::get\+\_\+first\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca pozycję pierwszej części robaka (głowy). 
+
+\begin{DoxyReturn}{Returns}
+Pozycja pierwszej części robaka (głowy). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_worm_a0a842a68a75413762081e8009ac8deba}\label{class_worm_a0a842a68a75413762081e8009ac8deba}} 
+\index{Worm@{Worm}!is\_dead@{is\_dead}}
+\index{is\_dead@{is\_dead}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{is\_dead()}{is\_dead()}}
+{\footnotesize\ttfamily void Worm\+::is\+\_\+dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która sprawdza czy robak powinien dalej żyć. 
+
+\mbox{\Hypertarget{class_worm_ac310d959242ae886db05f85b910291d8}\label{class_worm_ac310d959242ae886db05f85b910291d8}} 
+\index{Worm@{Worm}!is\_ready\_for\_breeding@{is\_ready\_for\_breeding}}
+\index{is\_ready\_for\_breeding@{is\_ready\_for\_breeding}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{is\_ready\_for\_breeding()}{is\_ready\_for\_breeding()}}
+{\footnotesize\ttfamily bool Worm\+::is\+\_\+ready\+\_\+for\+\_\+breeding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda która sprawdza czy robak jest gotowy do urodzenia nowego robaka. 
+
+\begin{DoxyReturn}{Returns}
+Czy ten robak spełnia wszystkie warunki do urodzenia nowego. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_worm_a3ca9ed847389e05d006c4b10ab0db353}\label{class_worm_a3ca9ed847389e05d006c4b10ab0db353}} 
+\index{Worm@{Worm}!make\_next\_move@{make\_next\_move}}
+\index{make\_next\_move@{make\_next\_move}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{make\_next\_move()}{make\_next\_move()}}
+{\footnotesize\ttfamily void Worm\+::make\+\_\+next\+\_\+move (\begin{DoxyParamCaption}\item[{bool}]{worm\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{int}]{food\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Metoda która porusza robakiem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worm\+\_\+board} & Tablica booli z tym gdzie są robaki. \\
+\hline
+{\em food\+\_\+board} & Tablica z jedzeniem. \\
+\hline
+{\em direction} & Kierunek w którym chce poruszyć się robak. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_worm_a628a7ce7b75d5e1449ea8e6a6de40e5c}\label{class_worm_a628a7ce7b75d5e1449ea8e6a6de40e5c}} 
+\index{Worm@{Worm}!move@{move}}
+\index{move@{move}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Worm\+::move (\begin{DoxyParamCaption}\item[{bool}]{worm\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{int}]{food\+\_\+board\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Metoda która porusza robakiem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worm\+\_\+board} & Tablica booli z tym gdzie są robaki. \\
+\hline
+{\em food\+\_\+board} & Tablica z jedzeniem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_worm_a92a509181e2b8de1fb59738779001ea3}\label{class_worm_a92a509181e2b8de1fb59738779001ea3}} 
+\index{Worm@{Worm}!next\_position@{next\_position}}
+\index{next\_position@{next\_position}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{next\_position()}{next\_position()}}
+{\footnotesize\ttfamily int Worm\+::next\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+position,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Metoda która zwraca następną pozycje na którą chce poruszyć się robak. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+position} & Aktualna pozycja pierwszej części (głowy) robaka. \\
+\hline
+{\em direction} & Kierunek w którym chce poruszyć się robak. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pozycja jaka będzie w danym kierunku. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_worm_aed45f20567aa80c2296566d4e492dcf4}\label{class_worm_aed45f20567aa80c2296566d4e492dcf4}} 
+\index{Worm@{Worm}!color@{color}}
+\index{color@{color}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily sf\+::\+Color Worm\+::color}
+
+
+
+Kolor robaka. 
+
+\mbox{\Hypertarget{class_worm_ab3a8ba354008a45a422fe6e65274b5b4}\label{class_worm_ab3a8ba354008a45a422fe6e65274b5b4}} 
+\index{Worm@{Worm}!m\_avg\_living\_time@{m\_avg\_living\_time}}
+\index{m\_avg\_living\_time@{m\_avg\_living\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_avg\_living\_time}{m\_avg\_living\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+avg\+\_\+living\+\_\+time \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalna długość życia tego robaka. 
+
+\mbox{\Hypertarget{class_worm_ab343a6abfc894888560f8491ac172537}\label{class_worm_ab343a6abfc894888560f8491ac172537}} 
+\index{Worm@{Worm}!m\_breeding\_time@{m\_breeding\_time}}
+\index{m\_breeding\_time@{m\_breeding\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_breeding\_time}{m\_breeding\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+breeding\+\_\+time = 20}
+
+
+
+Aktualny czas od kiedy ten robak urodził nowego robaka. 
+
+\mbox{\Hypertarget{class_worm_a4142f4dbe62d52faf3f6cda589e0fb7b}\label{class_worm_a4142f4dbe62d52faf3f6cda589e0fb7b}} 
+\index{Worm@{Worm}!m\_hungry\_time@{m\_hungry\_time}}
+\index{m\_hungry\_time@{m\_hungry\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_hungry\_time}{m\_hungry\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+hungry\+\_\+time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna długość czasu jaką ten robak porusza się bez jedzenia. 
+
+\mbox{\Hypertarget{class_worm_a9eb2d06d03c7fd922fb6a32858c4bd87}\label{class_worm_a9eb2d06d03c7fd922fb6a32858c4bd87}} 
+\index{Worm@{Worm}!m\_kids@{m\_kids}}
+\index{m\_kids@{m\_kids}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_kids}{m\_kids}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+kids = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna ilość dzieci jaką urodził ten robak. 
+
+\mbox{\Hypertarget{class_worm_a4cbbf94479de34ea5ae019d664af2252}\label{class_worm_a4cbbf94479de34ea5ae019d664af2252}} 
+\index{Worm@{Worm}!m\_length@{m\_length}}
+\index{m\_length@{m\_length}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_length}{m\_length}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+length}
+
+
+
+Aktualna długość tego robaka. 
+
+\mbox{\Hypertarget{class_worm_ad87c97e8c702f9b91bbcd7b25544046f}\label{class_worm_ad87c97e8c702f9b91bbcd7b25544046f}} 
+\index{Worm@{Worm}!m\_living\_time@{m\_living\_time}}
+\index{m\_living\_time@{m\_living\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_living\_time}{m\_living\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+living\+\_\+time = 0}
+
+
+
+Aktualna długość życia tego robaka. 
+
+\mbox{\Hypertarget{class_worm_a58df7942bdf3876e6b273a4ae40d7ab2}\label{class_worm_a58df7942bdf3876e6b273a4ae40d7ab2}} 
+\index{Worm@{Worm}!m\_max\_breeding\_time@{m\_max\_breeding\_time}}
+\index{m\_max\_breeding\_time@{m\_max\_breeding\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_max\_breeding\_time}{m\_max\_breeding\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+max\+\_\+breeding\+\_\+time = 20\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Długość czasu jaką robak musi odczekać przed następnym urodzeniem. 
+
+\mbox{\Hypertarget{class_worm_a1ad0e2fa53914abcaf9b80cc7c23722d}\label{class_worm_a1ad0e2fa53914abcaf9b80cc7c23722d}} 
+\index{Worm@{Worm}!m\_max\_hungry\_time@{m\_max\_hungry\_time}}
+\index{m\_max\_hungry\_time@{m\_max\_hungry\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_max\_hungry\_time}{m\_max\_hungry\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+max\+\_\+hungry\+\_\+time \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalna długość czasu jaką ten robak może chodzić po polach bez jedzenia. 
+
+\mbox{\Hypertarget{class_worm_ab7055c0bfecdbe8e44582d7c5283b657}\label{class_worm_ab7055c0bfecdbe8e44582d7c5283b657}} 
+\index{Worm@{Worm}!m\_max\_kids@{m\_max\_kids}}
+\index{m\_max\_kids@{m\_max\_kids}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_max\_kids}{m\_max\_kids}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+max\+\_\+kids \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalna ilość dzieci jaką może mieć ten robak. 
+
+\mbox{\Hypertarget{class_worm_a85bb84439fcb3910429cd69664910fdd}\label{class_worm_a85bb84439fcb3910429cd69664910fdd}} 
+\index{Worm@{Worm}!m\_max\_length@{m\_max\_length}}
+\index{m\_max\_length@{m\_max\_length}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_max\_length}{m\_max\_length}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+max\+\_\+length \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalna długość tego robaka. 
+
+\mbox{\Hypertarget{class_worm_a091def8fb520dfb1f5420db892f3d6f1}\label{class_worm_a091def8fb520dfb1f5420db892f3d6f1}} 
+\index{Worm@{Worm}!m\_max\_living\_time@{m\_max\_living\_time}}
+\index{m\_max\_living\_time@{m\_max\_living\_time}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_max\_living\_time}{m\_max\_living\_time}}
+{\footnotesize\ttfamily int Worm\+::m\+\_\+max\+\_\+living\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalna długość życia tego robaka +-\/ 10. 
+
+\mbox{\Hypertarget{class_worm_af58644174dc28c4f7391ca07a0d8108f}\label{class_worm_af58644174dc28c4f7391ca07a0d8108f}} 
+\index{Worm@{Worm}!m\_positions@{m\_positions}}
+\index{m\_positions@{m\_positions}!Worm@{Worm}}
+\doxysubsubsection{\texorpdfstring{m\_positions}{m\_positions}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Worm\+::m\+\_\+positions}
+
+
+
+Wektor z pozycjami na których znajdują się części robaka. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_worm_8h}{Worm.\+h}}\item 
+\mbox{\hyperlink{_worm_8cpp}{Worm.\+cpp}}\end{DoxyCompactItemize}
